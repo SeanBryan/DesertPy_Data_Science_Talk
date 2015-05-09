@@ -40,6 +40,10 @@ y = nm.array([11.0,6.3,5.1,12.3,9.0,15.2])
 
 x * y # works
 
+# this means, often, you can "magically" put numpy arrays into
+# a calculation that you thought you were only writing to handle
+# numbers
+
 z = nm.array([3.4,5.2])
 
 x + z # fail...the array shapes don't match
