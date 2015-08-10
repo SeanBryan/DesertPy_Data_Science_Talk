@@ -21,7 +21,7 @@ print real_data_for_paper
 # ok, we've got one set of 50 data points, at a cost of 1 million dollars
 # for the paper, we look in the following book to write the abstact:
 # Bevington and Robinson, Data Reduction and Error Analysis for the Physical Sciences
-# First, simulate analyzing the data for the abstract of the paper
+# First, let's analyze the data for the abstract of the paper
 mean_for_abstract = nm.mean(real_data_for_paper)
 # that was pretty easy, but how "typical" is this result if we had been able to repeat
 # the million-dollar experiment? B&R Page 71 says:
