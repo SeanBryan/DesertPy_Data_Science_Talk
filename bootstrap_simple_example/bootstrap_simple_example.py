@@ -24,7 +24,7 @@ def bootstrap_resample(data, num_realizations):
         resample_i = nm.floor(nm.random.rand(len(data))*len(data)).astype(int)
         # use that array of integers to resample the original data array
         # (some data points will be chosen more than once, others skipped, the order will be random
-        #  ...it's ok, that's the whole point of the algorithm to generate something that's a little array_like
+        #  ...it's ok, that's the whole point of the algorithm to generate something that's a little array like
         #  as if you had repeated the entire data collection process)
         data_resampled_i = data[resample_i]
         # now that we've got something like a data array from repeating the experiment, take the mean
