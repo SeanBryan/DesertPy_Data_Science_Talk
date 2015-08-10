@@ -56,8 +56,17 @@ print real_data_for_paper
 # instead of 5000 monte carlo simulations, let's get 5000 bootstrap resamples
 bootstrap_simulated_experiment_outcomes = bootstrap_resample(real_data_for_paper, 5000)
 
-# now make the same plot as before
+# now, as before let's print this out
 mean_for_abstract = nm.mean(real_data_for_paper)
+print ' '
+print 'The mean and error-on-the-mean from the bootstrap method is:'
+print str(mean_for_abstract) + ' +/- ' + str(error_on_the_mean_for_abstract_from_bootstrap)
+print ' '
+print 'Or, rounding digits properly: '
+print str(round(mean_for_abstract,3)) + ' +/- ' + str(round(error_on_the_mean_for_abstract_from_bootstrap,3))
+# (note, rounding should keep trailing zeros, and the "round" function doesn't...i.e. you should write 3.042 +/- 0.060)
+
+# and make the same plot as before
 error_on_the_mean_for_abstract_from_formula = nm.std(real_data_for_paper) / nm.sqrt(len(real_data_for_paper))
 import pylab
 pylab.figure(2)
