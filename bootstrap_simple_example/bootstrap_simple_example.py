@@ -58,6 +58,7 @@ bootstrap_simulated_experiment_outcomes = bootstrap_resample(real_data_for_paper
 
 # now, as before let's print this out
 mean_for_abstract = nm.mean(real_data_for_paper)
+error_on_the_mean_for_abstract_from_bootstrap = nm.std(bootstrap_simulated_experiment_outcomes)
 print ' '
 print 'The mean and error-on-the-mean from the bootstrap method is:'
 print str(mean_for_abstract) + ' +/- ' + str(error_on_the_mean_for_abstract_from_bootstrap)
