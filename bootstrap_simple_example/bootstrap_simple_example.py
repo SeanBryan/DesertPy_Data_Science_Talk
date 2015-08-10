@@ -53,7 +53,7 @@ real_data_for_paper = nm.random.randn(number_of_data_points)*actual_standard_dev
 print 'Entire Dataset:'
 print real_data_for_paper
 
-# instead of 500 monte carlo simulations, let's get 5000 bootstrap resamples
+# instead of 5000 monte carlo simulations, let's get 5000 bootstrap resamples
 bootstrap_simulated_experiment_outcomes = bootstrap_resample(real_data_for_paper, 5000)
 
 # now make the same plot as before
